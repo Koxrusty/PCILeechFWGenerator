@@ -55,20 +55,20 @@ sudo modprobe vfio vfio-pci
 
 ```bash
 # Interactive TUI (recommended for first-time users)
-sudo python3 pcileech.py tui
+sudo -E python3 pcileech.py tui
 
 # CLI interface for scripted builds
-sudo python3 pcileech.py build --bdf 0000:03:00.0 --board pcileech_35t325_x1
+sudo -E python3 pcileech.py build --bdf 0000:03:00.0 --board pcileech_35t325_x1
 
 # CLI build with custom Vivado settings
-sudo python3 pcileech.py build --bdf 0000:03:00.0 --board pcileech_35t325_x1 \
+sudo -E python3 pcileech.py build --bdf 0000:03:00.0 --board pcileech_35t325_x1 \
     --vivado-path /tools/Xilinx/2025.1/Vivado --vivado-jobs 8 --vivado-timeout 7200
 
 # Check VFIO configuration
-sudo python3 pcileech.py check --device 0000:03:00.0
+sudo -E python3 pcileech.py check --device 0000:03:00.0
 
 # Flash firmware to device
-sudo python3 pcileech.py flash output/firmware.bin
+sudo -E python3 pcileech.py flash output/firmware.bin
 ```
 
 
