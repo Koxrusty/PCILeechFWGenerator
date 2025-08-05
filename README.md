@@ -70,6 +70,9 @@ sudo -E python3 pcileech.py check --device 0000:03:00.0
 # Flash firmware to device
 sudo -E python3 pcileech.py flash output/firmware.bin
 ```
+# to build .bin
+vivado -mode batch -source vivado_generate_project.tcl
+vivado -mode batch -source vivado_build.tcl
 
 
 ### Development from Repository
